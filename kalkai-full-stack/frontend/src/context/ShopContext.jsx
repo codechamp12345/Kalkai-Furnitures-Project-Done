@@ -44,7 +44,7 @@ const ShopContextProvider = (props) => {
         if (token) {
             try {
 
-                await axios.post(backendUrl + '/api/cart/add', { itemId, size }, { headers: { token } })
+                await axios.post(backendUrl + '/api/cart/add', { itemId, size }, { headers: { token } },{withCredentials:true})
 
             } catch (error) {
                 console.log(error)
@@ -81,7 +81,7 @@ const ShopContextProvider = (props) => {
         if (token) {
             try {
 
-                await axios.post(backendUrl + '/api/cart/update', { itemId, size, quantity }, { headers: { token } })
+                await axios.post(backendUrl + '/api/cart/update', { itemId, size, quantity }, { headers: { token } },{withCredentials:true})
 
             } catch (error) {
                 console.log(error)
@@ -127,7 +127,7 @@ const ShopContextProvider = (props) => {
     const getUserCart = async ( token ) => {
         try {
             
-            const response = await axios.post(backendUrl + '/api/cart/get',{},{headers:{token}})
+            const response = await axios.post(backendUrl + '/api/cart/get',{},{headers:{token}},{withCredentials:true})
             if (response.data.success) {
                 setCartItems(response.data.cartData)
             }
