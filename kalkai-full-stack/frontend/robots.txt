@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin or backend folders if exposed on frontend domain
+Disallow: /admin/
+Disallow: /backend/
+
+# Sitemap location (replace with your actual sitemap URL if available)
+Sitemap: https://kalkai-furnitures-project-done-frontend.vercel.app/sitemap.xml
