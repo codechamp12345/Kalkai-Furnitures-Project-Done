@@ -53,7 +53,6 @@
 // // Start the server
 // app.listen(port, () => console.log(`Server started on PORT: ${port}`));
 
-
 import express from "express";
 import cors from "cors";
 import "dotenv/config";
@@ -80,6 +79,7 @@ const allowedOrigins = [
   "http://localhost:5175",
   "https://kalkai-furnitures-project-git-5adfc1-cmkhurd-gmailcoms-projects.vercel.app",
   "https://kalkai-furnitures-project-done-frontend-9e2x1tkgj.vercel.app",
+  "https://kalkai-furnitures-project-done.vercel.app",
 ];
 
 app.use(
