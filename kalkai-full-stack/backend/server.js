@@ -78,6 +78,8 @@ const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
   "http://localhost:5175",
+  "https://kalkai-furnitures-project-git-5adfc1-cmkhurd-gmailcoms-projects.vercel.app",
+  "https://kalkai-furnitures-project-done-frontend-9e2x1tkgj.vercel.app",
 ];
 
 app.use(
@@ -86,6 +88,7 @@ app.use(
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
+        console.log("❌ Blocked by CORS:", origin);
         callback(new Error("Not allowed by CORS"));
       }
     },
