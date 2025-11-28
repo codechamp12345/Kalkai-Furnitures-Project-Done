@@ -18,7 +18,7 @@ const PlaceOrder = () => {
                     <Title text1={'DELIVERY'} text2={'INFORMATION'} />
                 </div>
                 <div className='flex gap-3'>
-                    <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='First name' />
+                    <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type='text' pattern="[A-Za-z\s]+" placeholder='First name' />
                     <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='Last name' />
                 </div>
                 <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="email" placeholder='Email address' />
